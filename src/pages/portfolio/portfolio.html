@@ -1,0 +1,25 @@
+<!--
+  Generated template for the PortfolioPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>Portfolio</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-slides class="image-slider" loop="true" slidesPerView="2">
+        <ion-slide *ngFor="let img of images">
+          <img src="assets/img/{{img}}" class="thumb-img" imageViewer/>
+        </ion-slide>
+      </ion-slides>
+</ion-content>

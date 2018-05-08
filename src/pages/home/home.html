@@ -1,0 +1,43 @@
+ 
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Login</ion-title>
+    </ion-navbar>
+  </ion-header> 
+
+<ion-content class="login-bg" padding scroll="false">
+  <div class="logo-box" text-center>
+    <img src="assets/imgs/logo.png"/>
+  </div>
+  <h4 text-center>Welcome Back</h4>
+  <p text-center style="color:gray;margin: 0;">Sign in to continue</p>
+
+  <form [formGroup]="loginForm" (ngSubmit)="signinFn()">
+
+  <ion-item class="itme_css">        
+    <ion-label><img width="20px" src="assets/imgs/user_name.png"/>  </ion-label>
+    <ion-input placeholder="User Name" clearInput type="text" formControlName="user_name"></ion-input>
+ </ion-item>
+ <div class='form-text error' *ngIf="loginForm.controls.user_name.touched">
+    <ion-label no-margin stacked *ngIf="loginForm.controls.user_name.hasError('required')">User name is required.</ion-label>
+  </div>
+
+<ion-item class="itme_css">        
+    <ion-label>  <img width="20px" src="assets/imgs/pass_input.png"/>   </ion-label>
+    <ion-input placeholder="Password" clearInput type="password" formControlName="password"></ion-input>
+</ion-item>
+<div class='form-text error' *ngIf="loginForm.controls.password.touched && !loginForm.controls.password.valid">
+    <ion-label no-margin stacked wrap-text>Password is required.</ion-label>
+  </div>
+
+<button class="but_cs" ion-button color="dark" [disabled]="!loginForm.valid" >Sign In</button>
+
+</form>
+
+<p text-center style="color:#283890" (click)="movetoforgotpass()">Forgot Password ?</p>
+
+<p text-center class="dont-havenacc" (click)="gotoSignup()">Don't have an account.<span style="color:#283890">Sign up</span> </p>
+</ion-content>

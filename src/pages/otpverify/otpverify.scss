@@ -1,0 +1,26 @@
+page-otpverify {
+
+    font-family: 'Roboto', sans-serif!important;
+    .login-bg{
+        background-image: url('../assets/imgs/login_bg.png');
+        background-size: 100% 100%;
+
+    }
+
+    .logo-box{
+        margin-top: 30px;
+    }
+
+    .logo-box img {
+        width: 180px;
+      }
+
+    .itme_css{
+       border: 1px solid #cc2c8a !important;
+    border-radius: 8px !important;
+    margin-top: 20px !important;
+    }
+    .but_cs{
+        margin-top: 15px;width: 100%;border-radius: 6px;padding: 25px !important;
+    }
+}

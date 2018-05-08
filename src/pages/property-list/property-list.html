@@ -1,0 +1,47 @@
+<ion-header>
+
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="property-list">
+
+    <ion-list>
+        <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+
+          <ion-item>
+            <ion-label color="{{ myForm.controls.name.errors && myForm.controls.name.dirty ? 'danger' : 'primary' }}" floating primary>Name</ion-label>
+            <ion-input [(ngModel)]="userInfo.name" formControlName="name" type="text"
+                       id="name" spellcheck="false" autocapitalize="off">
+            </ion-input>
+          </ion-item>
+          
+          <ion-item>
+            <ion-label color="{{ myForm.controls.email.errors && myForm.controls.email.dirty ? 'danger' : 'primary' }}" floating primary>Email</ion-label>
+            <ion-input [(ngModel)]="userInfo.email" formControlName="email"
+                       type="text" id="email" spellcheck="false" autocapitalize="off">
+            </ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label color="{{ myForm.controls.subject.errors && myForm.controls.subject.dirty ? 'danger' : 'primary' }}" floating primary>Subject</ion-label>
+            <ion-input [(ngModel)]="userInfo.subject" formControlName="subject" type="text" id="subject">
+            </ion-input>
+          </ion-item>
+          
+          <ion-item>
+            <ion-label color="{{ myForm.controls.message.errors && myForm.controls.message.dirty ? 'danger' : 'primary' }}" floating primary>Message</ion-label>
+            <ion-textarea [(ngModel)]="userInfo.message" rows="2" maxLength="500" formControlName="message" id="message"></ion-textarea>
+          </ion-item>
+
+          <button ion-button type="submit" block primary [disabled]="!myForm.valid">Submit</button>
+        </form>
+      </ion-list>
+
+
+</ion-content>
+
+

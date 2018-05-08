@@ -1,0 +1,32 @@
+ 
+
+<ion-content class="login-bg" padding>
+  <div class="logo-box" text-center>
+    <img src="assets/imgs/logo.png"/>
+  </div>
+  <h4 text-center>Forgot Password ?</h4>
+  <p text-center style="color:gray;margin: 0;">We will send password to your register email</p>
+
+   <form [formGroup]="forgotForm" (ngSubmit)="forgotFn()">
+
+      <ion-item class="itme_css">        
+          <ion-label>  <img width="20px" src="assets/imgs/email_icon.png"/>   </ion-label>
+          <ion-input placeholder="Email" clearInput type="email" formControlName="email"></ion-input>
+      </ion-item>
+      <div class='form-text error' *ngIf="forgotForm.controls.email.touched">
+          <ion-label no-margin stacked *ngIf="forgotForm.controls.email.hasError('required')">Email id is required.</ion-label>
+      </div>
+        
+
+      <button class="but_cs" ion-button color="dark" [disabled]="!forgotForm.valid">Submit</button>
+
+    </form>
+
+<p text-center style="color:gray;" (click)="backlogin()">Go Back</p>
+
+ 
+ 
+ 
+
+
+</ion-content>

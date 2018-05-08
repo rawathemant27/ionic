@@ -1,0 +1,22 @@
+ 
+
+<ion-content class="login-bg" padding>
+  <div class="logo-box" text-center>
+     
+  </div>
+  <h4 text-center>OTP Verification</h4>
+  <p text-center style="color:gray;margin: 0;">Please enter the code recive in your email</p>
+
+ 
+  <form (ngSubmit)="gotolgoinpage()">
+    <ion-item class="itme_css">        
+        <ion-input placeholder="OTP Code" name="OTP" [(ngModel)]="otpPage.OTP" clearInput type="text"></ion-input>
+    </ion-item>
+
+    <button class="but_cs" ion-button color="dark">Verify</button>
+  </form>
+
+<p text-center style="color:gray;text-decoration:underline;">Resend</p>
+
+
+</ion-content>

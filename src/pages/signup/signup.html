@@ -1,0 +1,67 @@
+ 
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Sign Up</ion-title>
+    </ion-navbar>
+  </ion-header> 
+  
+
+<ion-content class="login-bg" padding scroll="false">
+    <div class="logo-box" text-center>
+      <img src="assets/imgs/logo.png"/>
+    </div>
+  <h4>Create a New Account</h4>
+  <h6>Sign up to continue</h6>
+
+
+  <form [formGroup]="signupForm" (ngSubmit)="signupFn()">
+    
+ 
+  <ion-item class="itme_css">        
+    <ion-label><img width="20px" src="assets/imgs/user_name.png"/> </ion-label>
+    <ion-input placeholder="User Name" clearInput type="text" formControlName="user_name"></ion-input>
+  </ion-item>
+  <div class='form-text error' *ngIf="signupForm.controls.user_name.touched">
+    <ion-label no-margin stacked *ngIf="signupForm.controls.user_name.hasError('required')">User name is required.</ion-label>
+   </div>
+
+<ion-item class="itme_css">        
+  <ion-label> <img width="20px" src="assets/imgs/email_icon.png"/>  </ion-label>
+  <ion-input placeholder="Email" clearInput type="text" formControlName="email"></ion-input>
+</ion-item>
+<div class='form-text error' *ngIf="signupForm.controls.email.touched">
+  <ion-label no-margin stacked *ngIf="signupForm.controls.email.hasError('required')">Email id is required.</ion-label>
+ </div>
+
+<ion-item class="itme_css">        
+  <ion-label>   <img width="20px" src="assets/imgs/pass_input.png"/> 
+  </ion-label>
+  <ion-input placeholder="Password" clearInput type="password" formControlName="password"></ion-input>
+</ion-item>
+
+<div class='form-text error' *ngIf="signupForm.controls.password.touched && !signupForm.controls.password.valid">
+  <ion-label no-margin stacked wrap-text>Password must be between 6 and 12 characters long.</ion-label>
+</div>
+
+<ion-item class="itme_css">        
+    <ion-label>   <img width="20px" src="assets/imgs/pass_input.png"/> 
+    </ion-label>
+    <ion-input placeholder="Confirm Password" clearInput type="password" formControlName="confirmPassword"
+    required show-password></ion-input>
+</ion-item>
+
+<div class='form-text error' *ngIf="signupForm.controls.confirmPassword.touched && signupForm.hasError('mismatchedPasswords') && signupForm.controls.password.valid">
+  <ion-label no-margin stacked>Passwords do not match</ion-label>
+</div>
+
+   <button class="but_cs" ion-button color="dark" [disabled]="!signupForm.valid">Sign up</button>
+
+</form>
+ 
+ 
+
+<p text-center class="dont-havenacc" (click)="gotoLogin()">Already have an account.<span style="color:#31429d"> Sign in</span></p>
+</ion-content>

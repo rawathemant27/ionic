@@ -1,0 +1,64 @@
+page-welcome { 
+
+ 
+ .menu-slice-box {
+     width: 100%;
+     margin-bottom:20px;
+ }
+ 
+ .menu-box1 {
+     width: 49%;
+     float: left;
+     background-color: 77, 80, 162, 0.5;
+     text-align: center;
+     color: #fff;
+     margin-bottom: 5px;
+     margin-right: 5px;
+     padding:20px 0;
+ }
+ 
+ .menu-box {
+     background-color: #2F76CE;
+     border-radius: 8px;
+     color: #fff;
+     float: left;
+     margin-bottom: 5px;
+     margin-right: 5px;
+     padding: 20px 0;
+     text-align: center;
+     width: 49%;
+ }
+  .menu-box img {
+     width: 50px;
+ }
+ 
+ .menu-box p {
+     padding: 0;
+     margin: 10px 0px 0px 0px;
+ }
+ 
+    .menu-box.trans_box {
+        background-color: rgba(77,80,162,0.5);
+    }
+    
+
+    ion-icon.icon.icon-ios {
+        /* width: 100%; */
+        font-size: 45px;
+    }
+
+    ion-icon.icon.icon-md {
+        /* width: 100%; */
+        font-size: 45px;
+    }
+
+    ion-icon.icon.icon-md.ion-md-menu{
+        font-size: 23px;
+    }
+
+    ion-icon.icon.icon-ios.ion-ios-menu {
+        font-size: 23px;
+    }
+ 
+ }
+  

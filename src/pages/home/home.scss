@@ -1,0 +1,45 @@
+page-home {
+    
+    font-family: 'Roboto', sans-serif!important;
+    .login-bg{
+        background-image: url('../assets/imgs/login_bg.png');
+        background-size: 100% 100%;
+
+    }
+
+    .logo-box{
+        margin-top: 30px;
+    }
+
+    .logo-box img {
+        width: 180px;
+      }
+      p.dont-havenacc {
+       
+        width: 100%;
+     
+        bottom: 12px;
+    }
+
+    .itme_css{
+        border: 1px solid #31429d !important;
+        border-radius: 8px !important;
+        margin-top: 20px !important;
+    }
+    .but_cs{
+        margin-top: 15px;width: 100%;border-radius: 6px;padding: 25px !important;
+    }
+    .facebook-btn.disable-hover.button.button-md.button-default.button-default-md {
+        background-color: #31429d;
+        border-radius: 6px;
+        height: 44px;
+        width: 100%;
+      }
+
+      .facebook-btn.disable-hover.button.button-ios.button-default.button-default-ios {
+        background-color: #31429d;
+        border-radius: 6px;
+        height: 44px;
+        width: 100%;
+      }
+}
